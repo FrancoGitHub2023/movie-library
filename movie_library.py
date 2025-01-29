@@ -170,12 +170,11 @@ class MovieLibrary:
         # Controlla ogni singolo film
         for film in self.movies:
             # Per ogni genere del film
-            for genere_film in film["genres"]:
-                # Se il genere corrisponde (non consideriamo maiuscol e minuscole)
-                if genere_film.lower() == genre.lower():
-                    # Aggiungiamo il film e passiamo al prossimo film
-                    film_trovati.append(film)
-                    break # usciamo da if 
+            # Se il genere corrisponde (non consideriamo maiuscol e minuscole)
+            if film["genres"].lower() == genre.lower():
+             # Aggiungiamo il film e passiamo al prossimo film
+             film_trovati.append(film)
+             break # usciamo da if 
                     
         # Restituiamo tutti i film trovati
         return film_trovati 
